@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category            
+            id="robot-plugin.category"
+            name="Robot">
+      </category>
+      <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="vn.fpt.robot.plugin.templates.NewProjectWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_adt_project.png"
+            id="robot-plugin.templates.NewProjectWizard"
+            name="Robot Application Project"
+            project="true">
+            <description>
+               Create a Robot Application Project
+            </description>
+      </wizard>            
+        <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="vn.fpt.robot.plugin.newproject.ImportProjectWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_adt_project.png"
+            id="com.android.ide.eclipse.adt.project.ImportProjectWizard.NewPrj"
+            name="Robot Project from Existing Code"
+            preferredPerspectives="org.eclipse.jdt.ui.JavaPerspective"
+            project="true">
+            <description>
+               Create one or more Robot projects from existing code
+            </description>
+        </wizard>
+        <!--
+        <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="com.android.ide.eclipse.adt.internal.wizards.newxmlfile.NewXmlFileWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_xml.png"
+            id="com.android.ide.eclipse.editors.wizards.NewXmlFileWizard"
+            name="Robot XML File"
+            preferredPerspectives="org.eclipse.jdt.ui.JavaPerspective"
+            project="false">
+            <description>
+               Create an Robot resource XML file
+            </description>
+        </wizard>
+        <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="com.android.ide.eclipse.adt.internal.wizards.newxmlfile.NewXmlFileWizard$NewLayoutWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_xml.png"
+            id="com.android.ide.eclipse.editors.wizards.NewXmlFileWizard.Layout"
+            name="Robot XML Layout File"
+            preferredPerspectives="org.eclipse.jdt.ui.JavaPerspective"
+            project="false">
+            <description>
+               Create an Robot layout XML file
+            </description>
+        </wizard>
+        <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="com.android.ide.eclipse.adt.internal.wizards.newxmlfile.NewXmlFileWizard$NewValuesWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_xml.png"
+            id="com.android.ide.eclipse.editors.wizards.NewXmlFileWizard.Values"
+            name="Robot XML Values File"
+            preferredPerspectives="org.eclipse.jdt.ui.JavaPerspective"
+            project="false">
+            <description>
+               Create an Robot XML values file such as strings.xml
+            </description>
+        </wizard>
+        -->
+        <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="vn.fpt.robot.plugin.templates.NewActivityWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_adt_project.png"
+            id="com.android.ide.eclipse.editors.wizards.NewActivityWizard"
+            name="Robot Activity"
+            preferredPerspectives="org.eclipse.jdt.ui.JavaPerspective"
+            project="false" >
+            <description>
+               Create an Robot Activity
+            </description>
+        </wizard>
+        
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">        
+      <page
+            class="vn.fpt.robot.plugin.preferences.RobotPreferencePage"
+            id="robot_plugin.preference.main"
+            name="Robot">
+      </page>
+      <!--
+      <page
+            category="robot_plugin.preference.main"
+            class="vn.fpt.robot.plugin.preferences.RobotPreferencePage"
+            id="robot_plugin.preference"
+            name="Robot SDK" />
+      -->
+   </extension>
+   
+   <extension
+        point="org.eclipse.ui.importWizards">
+        <category            
+            id="robot-plugin.category"
+            name="Robot"/>
+        <wizard
+            canFinishEarly="false"
+            category="robot-plugin.category"
+            class="vn.fpt.robot.plugin.newproject.ImportProjectWizard"
+            finalPerspective="org.eclipse.jdt.ui.JavaPerspective"
+            hasPages="true"
+            icon="icons/new_adt_project.png"
+            id="com.android.ide.eclipse.adt.project.ImportProjectWizard"
+            name="Existing Robot Code Into Workspace"
+            preferredPerspectives="org.eclipse.jdt.ui.JavaPerspective"
+            project="true">
+        </wizard>
+    </extension>
+    
+    <extension point="org.eclipse.ui.exportWizards">
+        <category            
+            id="robot-plugin.category"
+            name="Robot">
+        </category>
+        <wizard
+            category="robot-plugin.category"
+            class="com.android.ide.eclipse.adt.internal.wizards.export.ExportWizard"
+            icon="icons/android.png"
+            id="com.android.ide.eclipse.adt.project.ExportWizard"
+            name="Export Robot Application">
+        </wizard>
+    </extension>
+    <!--
+    <extension point="org.eclipse.ui.exportWizards">
+        <category            
+            id="robot-plugin.category"
+            name="Robot">
+        </category>
+        <wizard
+            category="robot-plugin.category"
+            class="com.android.ide.eclipse.adt.internal.wizards.exportgradle.GradleExportWizard"
+            icon="icons/android.png"
+            id="com.android.ide.eclipse.adt.project.ExportGradleWizard"
+            name="Generate Gradle build files">
+            <selection
+                class="org.eclipse.jdt.core.IJavaProject">
+            </selection>
+        </wizard>
+    </extension>
+   -->
+</plugin>

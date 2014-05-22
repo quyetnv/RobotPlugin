@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/robot_plugin_feature_1.0.0.qualifier.jar" id="robot_plugin_feature" version="1.0.0.qualifier">
+      <category name="robot.plugin"/>
+   </feature>
+   <category-def name="robot.plugin" label="Robot Development Tools">
+      <description>
+         Robot Development Tools
+      </description>
+   </category-def>
+</site>
